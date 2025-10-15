@@ -1,0 +1,89 @@
+3. Implement GitHub Operations using Git 
+• Cloning a Repository 
+• Making Changes and Creating a Branch 
+• Push/Pull Changes to GitHub
+
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop
+$ git config --global user.name "nikita badgujar"
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop
+$ git config --global user.email "badgujarnikita47@gmail.com"
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop
+$ git clone https://github.com/Nikcode13/DevOps_prac.git
+
+Cloning into 'DevOps_prac'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 9 (delta 1), reused 8 (delta 0), pack-re
+used 0 (from 0)
+Receiving objects: 100% (9/9), done.
+Resolving deltas: 100% (1/1), done.
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop
+$ cd DevOps_prac
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop/DevOps_prac (master)
+$ git checkout -b login
+Switched to a new branch 'login'
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop/DevOps_prac (login)
+$ echo "login_page" > loginPage.txt
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop/DevOps_prac (login)
+$ git add .
+
+warning: in the working copy of 'loginPage.txt', LF wi
+ll be replaced by CRLF the next time Git touches it
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop/DevOps_prac (login)
+$ git add loginPage.txt
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop/DevOps_prac (login)
+$ git commit -m "login page added"
+[login 78514f8] login page added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 loginPage.txt
+
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop/DevOps_prac (login)
+$ git push origin login
+
+info: please complete authentication in your browser..
+.
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 287 bytes | 287.00 KiB/s,
+ done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (
+from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1
+ local object.
+remote:
+remote: Create a pull request for 'login' on GitHub by
+ visiting:
+remote:      https://github.com/Nikcode13/DevOps_prac/
+pull/new/login
+remote:
+To https://github.com/Nikcode13/DevOps_prac.git
+ * [new branch]      login -> login
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop/DevOps_prac (login)
+$ git checkout master
+
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop/DevOps_prac (master)
+$ git pull origin master
+
+From https://github.com/Nikcode13/DevOps_prac
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+IMRD@IMRDCOMP56 MINGW64 ~/Desktop/DevOps_prac (master)
+$
